@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctype.h>
-#include <list>
-
 
 using namespace std;
 
@@ -45,9 +43,7 @@ public:
         } else {
             addFullArray(n);
         }
-    }
-
-  
+    } 
 	// fuction add number for index
     void add (int n, int index){
        //check for occurrence in the range of allowed values
@@ -80,25 +76,21 @@ public:
     }
 	// funtion remove for index 
     void remove(int index){
-        
         //checking an array for an empty value
         if (currentSize == 0) {
            cout<<"Not found element form delete";
            return; 
         } 
-        
         //delete element without shifting the elements
         if (index == currentSize) {
             currentSize--;
             return;
         }
-        
         //delete element with shifting of elements
         currentSize--;
         for (int i=index-1; i<currentSize; i++) {
             array[i] = array[i+1];
         }
-        
     }		
 	//function gets number fo index
     int getIndex(int index) {
@@ -116,9 +108,7 @@ public:
     }
 };
 
-
-int main()
-{
+int main() {
 ArrayList* list = new ArrayList();
     for (int i = 0 ; i < 20; i++){
         list->add(i);
@@ -128,6 +118,11 @@ list->print();
 cout<<list->getIndex(6)<<endl;
 
 list->remove(4);
+    for (int i = 0 ; i < 20; i++){
+    }
+list->print();
+
+   list->add(8,7);
     for (int i = 0 ; i < 20; i++){
     }
 list->print();
